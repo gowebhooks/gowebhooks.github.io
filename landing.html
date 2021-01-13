@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/apple-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+    <title>gowebhook | API Integration to Send webhooks quickly | Webhooks as a Service</title>
+  </head>
+  <body class="text-white antialiased">
+    <nav class="fixed z-50 w-full bg-gray-900 top-0 flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg shadow-lg">
+      <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white" href="/learning-lab/tailwind-starter-kit/presentation">Gowebhook</a>
+          <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="lg:flex flex-grow items-center hidden" id="example-collapse-navbar">
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="nav-item"><a class="download-button px-3 py-2 flex items-center text-xs uppercase font-bold text-white hover:text-gray-600" href="https://gowebhook.typeform.com/to/I3A244py" target="_blank"><span class="ml-2">Get Started</span></a></li>
+            <li class="nav-item"><a class="download-button px-3 py-2 flex items-center text-xs uppercase font-bold text-white hover:text-gray-600" href="https://calendly.com/gowebhook/30min" target="_blank"><span class="ml-2">Book a Demo</span></a></li>
+             <li class="nav-item"><a class="download-button px-3 py-2 flex items-center text-xs uppercase font-bold text-white hover:text-gray-600" href="https://gowebhook.gitbook.io/docs/" target="_blank"><span class="ml-2">Documentation</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="relative pt-16 items-center flex h-screen" style="max-height:860px; background-color: #F2F2F2; background-image: url(assets/img/landing_bg.png); background-size: cover ;">
+        <div class="container mx-auto items-center flex flex-wrap">
+          <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+            <div class="sm:pt-0">
+              <h2 class="font-semibold text-4xl text-white">Start sending webhooks with a just few lines of code</h2>
+              <p class="mt-4 text-lg leading-relaxed text-gray-200">We're experts in webhooks delivery so you don't have to be. Spend your engineering resources on your core business, not operating webhooks infrastructure and dealing with loads of failed endpoints.</p>
+
+              <div class="mt-12"><a class="get-started text-black font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 active:bg-gray-300 uppercase text-sm shadow hover:shadow-lg" style="transition:all .15s ease; background-color: #6FDFFE" href="https://gowebhook.typeform.com/to/I3A244py" target="_blank">Sign Up</a><a class="get-started text-gray-900 font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-white active:bg-gray-300 uppercase text-sm shadow hover:shadow-lg" style="transition:all .15s ease" href="https://gowebhook.gitbook.io/docs/" target="_blank">Read the docs</a>
+
+
+            </div>
+          </div>
+        </div>
+        <img class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12" src="./assets/img/landing_graphic.png" alt="..." style="max-height:860px;"/>
+      </section>
+
+
+
+     <!--<div
+        class="relative pt-16 pb-32 flex content-center items-center justify-center"
+        style="min-height: 75vh;"
+      >
+        <div
+          class="absolute top-0 w-full h-full bg-center bg-cover"
+          style='background-image: url(assets/img/landing_background2.png);'
+        >
+          <span
+            id="blackOverlay"
+            class="w-full h-full absolute opacity-25 bg-black"
+          ></span>
+        </div>
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div class="pr-12">
+                <h1 class="text-white font-semibold text-5xl">
+                  Start sending webhooks with a few lines of code
+                </h1>
+                <p class="mt-4 text-lg text-gray-300">
+                  We're experts in webhooks so you don't have to be. Spend your engineering resources on your core business, not webhook delivery.
+                </p>
+                <p><br><button class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-base px-8 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease">
+                  Book a Demo
+                </button></p>
+              </div>
+            </div>
+          </div>
+        </div>-->
+
+
+
+
+      <section class="block relative z-1 bg-white pt-16 pb-16">
+        <div class="container mx-auto">
+
+          <div class="justify-center flex flex-wrap">
+            <h4 class="text-3xl font-semibold text-gray-800 m-2">Use cases</h4><br><br>
+             <div class="w-full lg:w-12/12 px-4 text-center"><p class="text-gray-800">Why would you want to send out webhooks? Webhooks notify 3rd parties when events occur on your platform, kind of like a push notification. Usually this event is asynchronous so you must pro-actively ping your customers so they can take action.</p></div><br><br><br><br>
+            <div class="w-full lg:w-12/12 px-4">
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5 class="text-xl font-semibold pb-4 text-center text-gray-600">Fintech Platform</h5>
+                  <div class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg text-gray-800" style="transition:all .15s ease"><img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg" src="https://viainvest.com/blog/wp-content/uploads/2019/10/stuff.png"/><p class="p-5 text-gray-600">Use webhooks to notify your partners when their customers' invoices are paid, bank transfers are done pending, a new billing cycle is initiated, or when there is an account update.</p></div>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5 class="text-xl font-semibold pb-4 text-center text-gray-600">ML Labeling & Human Processing</h5>
+                  <div class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style="transition:all .15s ease"><img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg" src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1582562373/ML_vs_AI_ph9sbt.png"/><p class="p-5 text-gray-600">Use webhooks to notify your customers when their images are labeled, copy is translated and transcribed, data is cleaned and processed, etc. </p></div>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5 class="text-xl font-semibold pb-4 text-center text-gray-600">Risk Assessment Platform</h5>
+                  <div class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style="transition:all .15s ease"><img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg" src="https://media.warriortrading.com/2018/05/blog_low_risk.jpg"/><p class="p-5 text-gray-600">Use webhooks to notify your customers when your risk team has determined whether their customers or employees are reputable.</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-12/12 px-4">
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5 class="text-xl font-semibold pb-4 text-center text-gray-600">Chat Platform</h5>
+                  <div class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style="transition:all .15s ease"><img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg" src="https://cdn.dribbble.com/users/135634/screenshots/4882516/illo07.png"/><p class="p-5 text-gray-600">Use webhooks so your customers can notify their end users when a user's status changes or a message is sent.</p></div>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5 class="text-xl font-semibold pb-4 text-center text-gray-600">Analytics Platform</h5>
+                  <div class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style="transition:all .15s ease"><img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg" src="https://kit8.net/images/thumbnails/580/386/detailed/4/data_analysis@2x.png"/><p class="p-5 text-gray-600">Use webhooks to notify your customers when there are significant events in their data such as when a goal is met or if there is an anomaly in their data.</p></div>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5 class="text-xl font-semibold pb-4 text-center text-gray-600">Partner Platform/Marketplace</h5>
+                  <div class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg" style="transition:all .15s ease"><img alt="..." class="align-middle border-none max-w-full h-auto rounded-lg" src="https://tecnoblog.net/wp-content/uploads/2019/01/iphone-apps-001-700x480.jpg"/><p class="p-5 text-gray-600">Use webhooks to so partners can receive real time information in order to build 3rd party applications on your platform.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="pb-20 bg-gray-300">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap items-center pt-20">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+
+              <h3 class="text-3xl mb-2 font-semibold leading-normal text-gray-800">
+                Setting up infrastructure to deliver webhooks can get complicated
+              </h3>
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+              >
+                • You need to spin up separate, asynchronous message queues so your main systems are not stalled while waiting on external webhook delivery.<br>
+                • External endpoints will often hang or error, leaving your system to deal with retries, notifying and disabling naughty endpoints. In the worse case you can DDoS your own customers or overwhelm your own system.<br>
+                • Webhooks must be secure, reliable & idempotent. At scale.<br>
+                • If your team does not have expertise running webhook systems, mistakes can cost your business thousands.<br>
+                • You need a dashboard to track your deliveries and investigate failures.
+              </p>
+
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600"
+              >
+                <img
+                  alt="..."
+                  src="https://i.redd.it/lfwa4nxsr6241.png"
+                  class="w-full align-middle rounded-t-lg"
+                />
+                <blockquote class="relative p-8 mb-4">
+                  <svg
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 583 95"
+                    class="absolute left-0 w-full block"
+                    style="height: 95px; top: -94px;"
+                  >
+                    <polygon
+                      points="-30,95 583,95 583,65"
+                      class="text-pink-600 fill-current"
+                    ></polygon>
+                  </svg>
+                  <h4 class="text-xl font-bold text-white">
+                    Expensive engineering investment
+                  </h4>
+                  <p class="text-md font-light mt-2 text-white">
+                    Easily spends months of effort and hundreds of thousands of dollars on engineering resources to implement a robust webhook delivery system.
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><h4 class="text-3xl font-semibold text-gray-800 m-2 text-center">We handle the dirty stuff for you</h4>
+        <div class="w-full lg:w-12/12 px-4 text-center"><p class="text-gray-800">Our engineers have seen architectural mistakes that have cost companies millions of dollars and we don't want you to make the same ones.</p></div><br><br>
+        <div class="flex flex-wrap">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                  >
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold text-gray-800">Internal Dashboard</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Track your webhook deliveries and failures in an easy to use admin dashboard with built-in analytics and reporting.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
+                  >
+                    <i class="fas fa-retweet"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold text-gray-800">Smart Retries & Error Handling</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Our algorithms optimize delivery retries to maximize the chances of success. We notify customers about failing endpoints and disable naughty endpoints to prevent overwhelming your consumers.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold text-gray-800">Secure Channels</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Our security experts handle secret management and send your webhooks through secure channels only.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="relative py-20">
+        <div class="container mx-auto px-4">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-6/12 ml-auto mr-auto px-4">
+              <img alt="..." class="max-w-full rounded-lg shadow-xl" src="./assets/img/code_sample.png"/>
+            </div>
+            <div class="w-full md:w-6/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12 pt-6">
+                <div
+                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
+                >
+                  <i class="fas fa-rocket text-xl"></i>
+                </div>
+                <h3 class="text-3xl font-semibold text-gray-800">Sending your first webhook is easy</h3>
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          >1</span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">
+                          Grab your Gowebhook API key
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          >2</span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">In the code where your event occurs, make a call to the Gowebhook API with your event payload and consumer endpoints. Just one line of code. Customer logic stays on your end so there's no need to sync state between your database and Gowebhook.</h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-20 pb-48 bg-gray-300">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center text-center mb-24">
+            <div class="w-full lg:w-9/12 px-4">
+              <h2 class="text-4xl font-semibold text-gray-800">Our team has built infrastructure at scale</h2>
+              <p class="text-lg leading-relaxed m-4 text-gray-600">
+                Our senior engineers have built systems supporting Stripe, Palantir, Landed and a number of YC startups.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="./assets/img/stripe.png"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold text-gray-500">Stripe</h5>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="./assets/img/palantir.png"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold text-gray-500">Palantir</h5>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="./assets/img/landed.jpg"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold text-gray-500">Landed</h5>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt="..."
+                  src="./assets/img/yc.png"
+                  class="shadow-lg rounded-full max-w-full mx-auto"
+                  style="max-width: 120px;"
+                />
+                <div class="pt-6 text-center">
+                  <h5 class="text-xl font-bold text-gray-500">Y Combinator</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pb-20 relative block bg-gray-900">
+        <div class="container mx-auto px-4 pt-24 lg:pb-64">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold text-white">Pricing</h2>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                Hiring an engineering team to operate webhook infrastructure requires money, time and expertise. Let us do it for you for a fraction of the cost.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-12 justify-center">
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <i class="fas fa-medal text-xl"></i>
+              </div>
+              <h6 class="text-xl mt-5 font-semibold text-white">
+                Free Plan
+              </h6>
+              <p>$0/month</p>
+              <p class="mt-2 mb-4 text-gray-500">
+                Perfect for freelancers and side projects. Supports up to 10 users and 100 webhooks/month.
+              </p>
+            </div>
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <i class="fas fa-poll text-xl"></i>
+              </div>
+              <h5 class="text-xl mt-5 font-semibold text-white">
+                Startup Plan
+              </h5>
+              <p>$49/month + 1¢/webhook</p>
+              <p class="mt-2 mb-4 text-gray-500">
+                Great for small teams and early startups. Supports up to 1000 users and 100,000 webhooks/month.
+              </p>
+            </div>
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <i class="fas fa-lightbulb text-xl"></i>
+              </div>
+              <h5 class="text-xl mt-5 font-semibold text-white">Enterprise Plan</h5>
+              <p>Talk to us</p>
+              <p class="mt-2 mb-4 text-gray-500">
+               Enterprise grade uptime, reliability and security. Supports unlimited users and webhook deliveries at scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative block py-24 lg:pt-0 bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-20">
+            <div class="w-full lg:w-6/12 px-4">
+              <div
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
+              >
+                <div class="flex-auto p-5 lg:p-10">
+                  <h4 class="text-2xl font-semibold mx-auto text-gray-900"><center>Ready to get started?</center></h4>
+                  <div class="text-center mt-6">
+                    <a href="https://calendly.com/gowebhook/30min" target="_blank"><button
+                      class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                      style="transition: all 0.15s ease 0s;"
+                    >
+                      Book a Demo
+                    </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold text-gray-800">Let's keep in touch!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-gray-700">
+              Call/text us at (626) 594-6262
+            </h5>
+          </div>
+          <div class="w-full lg:w-6/12 px-4 text-gray-700">
+            <!--<div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/presentation"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://blog.creative-tim.com"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://www.github.com/creativetimofficial"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/bootstrap-themes/free"
+                      >Free Products</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-gray-600 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
+                      >MIT License</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://creative-tim.com/terms"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://creative-tim.com/privacy"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                      href="https://creative-tim.com/contact-us"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>-->
+            Made with love in San Francisco
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2020 Gowebhook
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+</html>
